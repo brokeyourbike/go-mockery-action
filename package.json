@@ -9,7 +9,7 @@
     "format": "ts-standard --fix **/*.ts",
     "format-check": "ts-standard **/*.ts",
     "test": "jest --coverage",
-    "pre-checkin": "npm run format && npm run build && npm test"
+    "pre-checkin": "npm run build && npm test"
   },
   "repository": {
     "type": "git",

@@ -84,14 +84,15 @@ export async function findMockeryFile (
     const files = parseChecksumContent(versionSpec, checksumContent)
 
     for (const file of files) {
-      if (file.os === platform, file.arch === arch) {
+      if (file.os === platform && file.arch === arch) {
         return file
       }
     }
 
     throw new Error(`No file for platform: ${platform} arch: ${arch}`)
   } catch (err) {
-    throw new Error(`Failed to find ${versionSpec}: ${err}`)
+    const errMessage = err instanceof Error ? err.message : ''
+    throw new Error(`Failed to find ${versionSpec}: ${errMessage}`)
   }
 }
 

@@ -1,10 +1,8 @@
 import * as core from '@actions/core'
-import * as io from '@actions/io'
 import os from 'os'
-import cp from 'child_process'
 import * as utils from './utils'
 
-export async function run () {
+export async function run (): Promise<void> {
   try {
     const platform: string = os.platform()
     const arch: string = os.arch()
@@ -14,7 +12,7 @@ export async function run () {
 
     const auth = token === '' ? undefined : `token ${token}`
 
-    if (!versionSpec) {
+    if (versionSpec === '') {
       core.setFailed('Version is not specified')
       return
     }
@@ -26,10 +24,6 @@ export async function run () {
 
     core.addPath(installDir)
     core.info('Added mockery to the path')
-
-    const mockeryPath = await io.which('mockery')
-    const goVersion = (cp.execSync(`${mockeryPath} --version`) || '').toString()
-    core.info(goVersion)
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Failed to `run`'
     core.setFailed(message)

@@ -1,4 +1,4 @@
-import {expect, it} from '@jest/globals'
+import {expect, test, it} from '@jest/globals'
 import * as utils from '../src/utils'
 
 const filenamesDataProvider = [
@@ -23,7 +23,7 @@ describe.each(filenamesDataProvider)('detectArchForFilename', (data) => {
   })
 })
 
-it('can prepare download url', () => {
+test('can prepare download url', () => {
   const version = '1.0.0'
   const filename = 'somefile.txt'
 
@@ -31,7 +31,7 @@ it('can prepare download url', () => {
   expect(url).toBe('https://github.com/vektra/mockery/releases/download/v1.0.0/somefile.txt')
 })
 
-it('can parse checksumn data', () => {
+test('can parse checksumn data', () => {
   const version = '1.1.1'
   const data = `sum1  mockery_1.1.1_Darwin_x86_64.tar.gz\nsum2  mockery_1.1.1_Linux_x86_64.tar.gz`
 
