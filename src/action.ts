@@ -1,4 +1,5 @@
 import * as core from '@actions/core'
+import * as tc from '@actions/tool-cache'
 import os from 'os'
 import * as utils from './utils'
 
@@ -19,10 +20,17 @@ export async function run (): Promise<void> {
 
     core.info(`Setup mockery version spec ${versionSpec}`)
 
-    const file = await utils.findMockeryFile(versionSpec, platform, arch)
-    const installDir = await utils.installMockery(file, auth)
+    let mockeryPath: string
 
-    core.addPath(installDir)
+    mockeryPath = tc.find(utils.CACHE_KEY, versionSpec, arch)
+    if (mockeryPath !== '') {
+      core.info(`Found in cache @ ${mockeryPath}`)
+    } else {
+      const file = await utils.findMockeryFile(versionSpec, platform, arch)
+      mockeryPath = await utils.installMockery(file, auth)
+    }
+
+    core.addPath(mockeryPath)
     core.info('Added mockery to the path')
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Failed to `run`'

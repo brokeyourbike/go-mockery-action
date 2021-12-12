@@ -6,10 +6,10 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc && ncc build --minify",
-    "format": "ts-standard --fix **/*.ts",
-    "format-check": "ts-standard **/*.ts",
+    "format": "ts-standard --fix src/*.ts",
+    "format-check": "ts-standard src/*.ts",
     "test": "jest --coverage",
-    "pre-checkin": "npm run build && npm test"
+    "pre-checkin": "np, run format && npm run build && npm test"
   },
   "repository": {
     "type": "git",

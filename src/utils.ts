@@ -2,6 +2,7 @@ import * as httpm from '@actions/http-client'
 import * as tc from '@actions/tool-cache'
 import * as core from '@actions/core'
 
+export const CACHE_KEY = 'mockery'
 export const CHECKSUM_FILENAME = 'checksum.txt'
 
 export interface IMockeryVersionFile {
@@ -108,7 +109,14 @@ export async function installMockery (
   const extPath = await extractMockeryArchive(downloadPath)
   core.info(`Successfully extracted mockery to ${extPath}`)
 
-  return extPath
+  core.info('Adding to the cache ...')
+  const cachedDir = await tc.cacheDir(
+    extPath,
+    CACHE_KEY,
+    file.version
+  )
+  core.info(`Successfully cached mockery to ${cachedDir}`)
+  return cachedDir
 }
 
 export async function extractMockeryArchive (archivePath: string): Promise<string> {
