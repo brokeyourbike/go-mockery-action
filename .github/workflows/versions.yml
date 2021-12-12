@@ -1,0 +1,32 @@
+name: validate 'setup-mockery'
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+  pull_request:
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  setup-versions:
+    name: setup versions
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+        mockery: [2.9.4, 1.1.2]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: setup-mockery ${{ matrix.mockery }}
+        uses: ./
+        with:
+          mockery-version: ${{ matrix.mockery }}
+
+      - name: verify mockery
+        run: __tests__/verify-mockery.sh ${{ matrix.mockery }}
+        shell: bash

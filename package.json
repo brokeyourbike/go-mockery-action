@@ -1,0 +1,48 @@
+{
+  "name": "go-mockery-action",
+  "version": "0.0.0",
+  "description": "Setup mockery Github Action",
+  "private": true,
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc && ncc build",
+    "format": "ts-standard --fix **/*.ts",
+    "format-check": "ts-standard **/*.ts",
+    "test": "jest --coverage",
+    "pre-checkin": "npm run format && npm run build && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brokeyourbike/go-mockery-action.git"
+  },
+  "keywords": [
+    "actions",
+    "go",
+    "setup",
+    "mockery"
+  ],
+  "author": "Ivan Stasiuk <ivan@stasi.uk>",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/http-client": "^1.0.11",
+    "@actions/io": "^1.1.1",
+    "@actions/tool-cache": "^1.7.1",
+    "@octokit/plugin-paginate-rest": "^2.17.0",
+    "lodash": "^4.17.21",
+    "semver": "^7.3.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.12",
+    "@types/semver": "^7.3.9",
+    "@zeit/ncc": "^0.22.3",
+    "jest": "^27.4.4",
+    "jest-circus": "^27.4.4",
+    "nock": "^13.2.1",
+    "ts-jest": "^27.1.1",
+    "ts-node": "^10.4.0",
+    "ts-standard": "^11.0.0",
+    "typescript": "^3.8.3"
+  }
+}

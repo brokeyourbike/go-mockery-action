@@ -1,0 +1,14 @@
+name: 'Setup mockery'
+description: 'Setup mockery environment and add it to the PATH'
+author: 'Ivan Stasiuk'
+inputs:
+  mockery-version:
+    description: 'The mockery version to download (if necessary) and use. Exact version should be provided.'
+    required: true
+  token:
+    description: Used to pull distributions from mockery repo. Since there's a default, this is typically not supplied by the user.
+    default: ${{ github.token }}
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
