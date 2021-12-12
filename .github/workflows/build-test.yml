@@ -27,9 +27,6 @@ jobs:
       - name: npm install
         run: npm install
 
-      - name: Lint
-        run: npm run format-check
-
       - name: npm test
         run: npm test
 
