@@ -37,12 +37,9 @@ test('can parse checksumn data', () => {
 
   const parsed = utils.parseChecksumContent(version, data)
 
-  const expected = {
-    version,
-    files: [
-      {filename: 'mockery_1.1.1_Darwin_x86_64.tar.gz', checksum: 'sum1', os: 'darwin', arch: 'x64'},
-      {filename: 'mockery_1.1.1_Linux_x86_64.tar.gz', checksum: 'sum2', os: 'linux', arch: 'x64'},
-    ]
-  }
+  const expected = [
+    {filename: 'mockery_1.1.1_Darwin_x86_64.tar.gz', checksum: 'sum1', os: 'darwin', arch: 'x64', version},
+    {filename: 'mockery_1.1.1_Linux_x86_64.tar.gz', checksum: 'sum2', os: 'linux', arch: 'x64', version},
+  ]
   expect(parsed).toStrictEqual(expected)
 })
