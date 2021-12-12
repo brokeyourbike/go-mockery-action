@@ -1,4 +1,4 @@
-name: validate 'setup-mockery'
+name: validate 'setup-mockery' action
 on:
   push:
     branches:
