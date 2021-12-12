@@ -27,4 +27,4 @@ jobs:
         uses: paambaati/codeclimate-action@v3.0.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_TOKEN }}
-          coverageCommand: npm run test
+          coverageCommand: 'npm run test'
