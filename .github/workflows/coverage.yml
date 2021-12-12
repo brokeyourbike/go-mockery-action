@@ -23,11 +23,8 @@ jobs:
       - name: npm install
         run: npm install
 
-      - name: npm test
-        run: npm test
-
-
       - name: Upload coverage to codeclimate
         uses: paambaati/codeclimate-action@v3.0.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_TOKEN }}
+          coverageCommand: npm run test
