@@ -28,5 +28,7 @@ jobs:
           mockery-version: ${{ matrix.mockery }}
 
       - name: Verify mockery
-        run: __tests__/verify-mockery.sh ${{ matrix.mockery }}
+        run: |
+          chmod +x ./__tests__/verify-mockery.sh
+          ./__tests__/verify-mockery.sh ${{ matrix.mockery }}
         shell: bash
