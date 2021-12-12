@@ -1,6 +1,9 @@
 name: 'Setup mockery'
 description: 'Setup mockery environment and add it to the PATH'
 author: 'Ivan Stasiuk'
+branding:
+  icon: 'box'
+  color: 'blue'
 inputs:
   mockery-version:
     description: 'The mockery version to download and use. Exact version should be provided.'
