@@ -19,6 +19,11 @@ describe('setup-mockery', () => {
   let stdoutWriteSpy: jest.SpyInstance;
   let findMockeryFileSpy: jest.SpyInstance;
 
+  beforeAll(() => {
+    process.env['GITHUB_PATH'] = '' // Stub out ENV file functionality so we can verify it writes to standard out
+    console.log('::stop-commands::stoptoken') // Disable executing of runner commands when running tests in actions
+  })
+
   beforeEach(() => {
     // @actions/core
     inputs = {};
@@ -39,6 +44,10 @@ describe('setup-mockery', () => {
     debugSpy = jest.spyOn(core, 'debug')
     stdoutWriteSpy = jest.spyOn(process.stdout, 'write')
   })
+
+  afterAll(async () => {
+    console.log('::stoptoken::') // Re-enable executing of runner commands when running tests in actions
+  }, 100000);
 
   afterEach(() => {
     jest.resetAllMocks();
