@@ -1,5 +1,4 @@
 {
-  "name": "go-mockery-action",
   "version": "0.1.1",
   "description": "Setup mockery Github Action",
   "private": true,
