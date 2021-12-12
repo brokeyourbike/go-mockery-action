@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.2](https://www.github.com/brokeyourbike/go-mockery-action/compare/v0.1.1...v0.1.2) (2021-12-12)
+
+
+### Bug Fixes
+
+* use cache ([6a5479e](https://www.github.com/brokeyourbike/go-mockery-action/commit/6a5479e463ee1a646536131a49bb8b8657dacc32))
+
 ### [0.1.1](https://www.github.com/brokeyourbike/go-mockery-action/compare/v0.1.0...v0.1.1) (2021-12-12)
 
 
