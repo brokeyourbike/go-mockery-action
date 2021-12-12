@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.1](https://www.github.com/brokeyourbike/go-mockery-action/compare/v0.1.0...v0.1.1) (2021-12-12)
+
+
+### Bug Fixes
+
+* add icon for action ([54a021d](https://www.github.com/brokeyourbike/go-mockery-action/commit/54a021d17e136ed81d024ea3ea96e37e9678e02e))
+
 ## [0.1.0](https://www.github.com/brokeyourbike/go-mockery-action/compare/v0.0.0...v0.1.0) (2021-12-12)
 
 
