@@ -6,6 +6,7 @@ const filenamesDataProvider = [
   {filename: 'mockery_1.1.1_Linux_x86_64.tar.gz', wantOs: 'linux', wantArch: 'x64'},
   {filename: 'mockery_1.1.1_Linux_arm64.tar.gz', wantOs: 'linux', wantArch: 'arm64'},
   {filename: 'mockery_1.1.1_Windows_x86_64.tar.gz', wantOs: 'win32', wantArch: 'x64'},
+  {filename: 'mockery_1.1.1_Cat_x128.tar.gz', wantOs: undefined, wantArch: undefined},
 ]
 
 describe.each(filenamesDataProvider)('detectOsForFilename', (data) => {
