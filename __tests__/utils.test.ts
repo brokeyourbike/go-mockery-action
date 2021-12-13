@@ -31,7 +31,7 @@ test('can prepare download url', () => {
   expect(url).toBe('https://github.com/vektra/mockery/releases/download/v1.0.0/somefile.txt')
 })
 
-test('can parse checksumn data', () => {
+test('can parse checksum data', () => {
   const version = '1.1.1'
   const data = `sum1  mockery_1.1.1_Darwin_x86_64.tar.gz\nsum2  mockery_1.1.1_Linux_x86_64.tar.gz`
 
@@ -42,4 +42,28 @@ test('can parse checksumn data', () => {
     {filename: 'mockery_1.1.1_Linux_x86_64.tar.gz', checksum: 'sum2', os: 'linux', arch: 'x64', version},
   ]
   expect(parsed).toStrictEqual(expected)
+})
+
+test('will reject invalid checksum data', () => {
+  const version = '1.1.1'
+  const data = `i-am-wrong-checksum-data`
+
+  const parsed = utils.parseChecksumContent(version, data)
+  expect(parsed).toStrictEqual([])
+})
+
+test('will reject if platform is invalid', () => {
+  const version = '1.1.1'
+  const data = `sum1  mockery_1.1.1_Cat_x86_64.tar.gz`
+
+  const parsed = utils.parseChecksumContent(version, data)
+  expect(parsed).toStrictEqual([])
+})
+
+test('will reject if arch is invalid', () => {
+  const version = '1.1.1'
+  const data = `sum1  mockery_1.1.1_Linux_x12345.tar.gz`
+
+  const parsed = utils.parseChecksumContent(version, data)
+  expect(parsed).toStrictEqual([])
 })
