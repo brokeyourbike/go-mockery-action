@@ -14,7 +14,7 @@ Basic:
 ```yaml
 steps:
   - uses: actions/checkout@v2
-  - uses: brokeyourbike/go-mockery-action@v0.1.0
+  - uses: brokeyourbike/go-mockery-action@v0.1.4
     with:
       mockery-version: '2.9.4' # The mockery version to download and use.
   - run: mockery --all
