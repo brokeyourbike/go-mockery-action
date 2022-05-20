@@ -20,6 +20,9 @@ steps:
   - run: mockery --all
 ```
 
+## Authors
+- [Ivan Stasiuk](https://github.com/brokeyourbike) | [Twitter](https://twitter.com/brokeyourbike) | [stasi.uk](https://stasi.uk)
+
 ## License
 
-The scripts and documentation in this project are released under the [MPL-2.0](/LICENSE)
+The scripts and documentation in this project are released under the [MPL-2.0](https://github.com/brokeyourbike/go-mockery-action/blob/main/LICENSE)
