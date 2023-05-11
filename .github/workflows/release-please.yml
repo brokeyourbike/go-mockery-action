@@ -16,7 +16,9 @@ jobs:
         with:
           release-type: node
           bump-minor-pre-major: true
+
       - uses: actions/checkout@v3
+
       - name: tag major and patch versions
         run: |
           git config user.name github-actions[bot]

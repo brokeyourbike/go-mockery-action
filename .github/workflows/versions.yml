@@ -11,7 +11,6 @@ on:
 
 jobs:
   setup-versions:
-    name: setup versions
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -19,15 +18,14 @@ jobs:
         os: [macos-latest, windows-latest, ubuntu-latest]
         mockery: [2.9.4, 1.1.2]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: setup-mockery ${{ matrix.mockery }}
         uses: ./
         with:
           mockery-version: ${{ matrix.mockery }}
 
-      - name: Verify mockery
+      - name: verify mockery
         run: |
           chmod +x ./__tests__/verify-mockery.sh
           ./__tests__/verify-mockery.sh ${{ matrix.mockery }}
