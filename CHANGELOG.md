@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.5](https://www.github.com/brokeyourbike/go-mockery-action/compare/v0.1.4...v0.1.5) (2023-05-11)
+
+
+### Bug Fixes
+
+* update deps ([bc2bbb3](https://www.github.com/brokeyourbike/go-mockery-action/commit/bc2bbb3c9dddbc10554c4c6fab62d0eb020eb23b))
+
 ### [0.1.4](https://www.github.com/brokeyourbike/go-mockery-action/compare/v0.1.3...v0.1.4) (2022-05-16)
 
 
