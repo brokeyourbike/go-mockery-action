@@ -29,7 +29,7 @@
     "@actions/tool-cache": "^1.7.1",
     "@octokit/plugin-paginate-rest": "^2.17.0",
     "lodash": "^4.17.21",
-    "semver": "^7.3.5"
+    "semver": "^7.5.2"
   },
   "devDependencies": {
     "@types/jest": "^27.0.3",
