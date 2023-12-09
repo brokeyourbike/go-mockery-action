@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.1.6](https://www.github.com/brokeyourbike/go-mockery-action/compare/v0.1.5...v0.1.6) (2023-12-09)
+
+
+### Bug Fixes
+
+* ncc ([9497df4](https://www.github.com/brokeyourbike/go-mockery-action/commit/9497df4d0740d391af3c4c2aadf8cfde2cd0c6e2))
+* node20 ([06f7111](https://www.github.com/brokeyourbike/go-mockery-action/commit/06f7111e3463b7dc2bab208e6763dca523186346))
+
 ### [0.1.5](https://www.github.com/brokeyourbike/go-mockery-action/compare/v0.1.4...v0.1.5) (2023-05-11)
 
 
