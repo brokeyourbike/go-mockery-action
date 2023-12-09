@@ -20,6 +20,12 @@ steps:
   - run: mockery --all
 ```
 
+## Arguments
+
+| Input  | Description | Usage |
+| :---:     |     :---:   |    :---:   |
+| `mockery-version`  | [mockery](https://github.com/vektra/mockery) version to download and use  | *Required |
+
 ## Authors
 
 - [Ivan Stasiuk](https://github.com/brokeyourbike) | [Twitter](https://twitter.com/brokeyourbike) | [LinkedIn](https://www.linkedin.com/in/brokeyourbike) | [stasi.uk](https://stasi.uk)
