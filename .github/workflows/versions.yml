@@ -16,7 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [macos-latest, windows-latest, ubuntu-latest]
-        mockery: [2.9.4, 1.1.2]
+        mockery: [3.6.1, 2.9.4]
     steps:
       - uses: actions/checkout@v6
 

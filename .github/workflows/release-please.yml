@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
-      - uses: googleapis/release-please-action@v6
+      - uses: googleapis/release-please-action@v4
         id: release
         with:
           release-type: node
