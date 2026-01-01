@@ -5,8 +5,13 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-mockery_version="$(mockery --version)"
-echo "Found 'mockery' version '$mockery_version'"
+if mockery version >/dev/null 2>&1; then
+  mockery_version="$(mockery version)"
+else
+  mockery_version="$(mockery --version)"
+fi
+
+echo "Found mockery version: $mockery_version"
 
 if [ -z "$(echo $mockery_version | grep $1)" ]; then
   echo "Unexpected version :("
