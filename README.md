@@ -1,8 +1,7 @@
 # go-mockery-action
 
 [![Latest Stable Version](https://img.shields.io/github/v/release/brokeyourbike/go-mockery-action)](https://github.com/brokeyourbike/go-mockery-action/releases)
-[![Maintainability](https://api.codeclimate.com/v1/badges/1b0eb816c10010d31cc6/maintainability)](https://codeclimate.com/github/brokeyourbike/go-mockery-action/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/1b0eb816c10010d31cc6/test_coverage)](https://codeclimate.com/github/brokeyourbike/go-mockery-action/test_coverage)
+[![codecov](https://codecov.io/gh/brokeyourbike/go-mockery-action/graph/badge.svg?token=hpF9JeJxc5)](https://codecov.io/gh/brokeyourbike/go-mockery-action)
 
 Set up your GitHub Actions workflow with a specific version of [mockery](https://github.com/vektra/mockery)
 
