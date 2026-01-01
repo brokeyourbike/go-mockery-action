@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://github.com/brokeyourbike/go-mockery-action/compare/v0.1.7...v0.2.0) (2026-01-01)
+
+
+### Features
+
+* upgrade and fmt ([7522995](https://github.com/brokeyourbike/go-mockery-action/commit/7522995a51d8acb6b7cf7aa357b2575763882f21))
+
+
+### Bug Fixes
+
+* node24 ([ed9328f](https://github.com/brokeyourbike/go-mockery-action/commit/ed9328f13528b88b63920c11ecfe2bb7275990e2))
+
 ### [0.1.7](https://www.github.com/brokeyourbike/go-mockery-action/compare/v0.1.6...v0.1.7) (2024-02-17)
 
 
