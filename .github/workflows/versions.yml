@@ -18,7 +18,7 @@ jobs:
         os: [macos-latest, windows-latest, ubuntu-latest]
         mockery: [2.9.4, 1.1.2]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: setup-mockery ${{ matrix.mockery }}
         uses: ./

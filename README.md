@@ -12,7 +12,7 @@ See [action.yml](action.yml)
 Basic:
 ```yaml
 steps:
-  - uses: actions/checkout@v3
+  - uses: actions/checkout@v6
   - uses: brokeyourbike/go-mockery-action@v0
     with:
       mockery-version: '2.9.4' # The mockery version to download and use.
