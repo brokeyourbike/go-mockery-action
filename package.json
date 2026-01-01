@@ -5,8 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc && ncc build --minify",
-    "fmt:fix": "ts-standard --fix src/*.ts",
-    "fmt": "ts-standard src/*.ts",
+    "fmt": "prettier **/*.ts --write",
     "test": "jest --coverage",
     "pre-checkin": "npm run format && npm run build && npm test"
   },
@@ -23,26 +22,25 @@
   "author": "Ivan Stasiuk <ivan@stasi.uk>",
   "license": "MPL-2.0",
   "dependencies": {
-    "@actions/core": "^1.6.0",
-    "@actions/http-client": "^1.0.11",
-    "@actions/io": "^1.1.1",
-    "@actions/tool-cache": "^1.7.1",
-    "@octokit/plugin-paginate-rest": "^2.17.0",
+    "@actions/core": "^2.0.1",
+    "@actions/http-client": "^3.0.0",
+    "@actions/io": "^2.0.0",
+    "@actions/tool-cache": "^2.0.2",
+    "@octokit/plugin-paginate-rest": "^14.0.0",
     "lodash": "^4.17.21",
-    "semver": "^7.3.5"
+    "semver": "^7.7.3"
   },
   "devDependencies": {
-    "@types/jest": "^28",
-    "@types/node": "^20",
-    "@types/prettier": "2.6.0",
-    "@types/semver": "^7.3.9",
+    "@types/jest": "^30",
+    "@types/node": "^24",
+    "@types/semver": "^7.7.1",
     "@vercel/ncc": "^0.38",
-    "jest": "^28",
-    "jest-circus": "^28",
-    "nock": "^13.2.1",
-    "ts-jest": "^28",
-    "ts-standard": "*",
-    "typescript": "<=4.5.0"
+    "jest": "^30.2.0",
+    "jest-circus": "^30.2.0",
+    "nock": "^14.0.10",
+    "prettier": "3.7.4",
+    "ts-jest": "^29.4.6",
+    "typescript": "5.9.3"
   },
   "standard": {
     "ignore": "dist/"
