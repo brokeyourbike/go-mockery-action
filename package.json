@@ -26,7 +26,7 @@
     "@actions/io": "^2.0.0",
     "@actions/tool-cache": "^2.0.2",
     "@octokit/plugin-paginate-rest": "^14.0.0",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "semver": "^7.7.3"
   },
   "devDependencies": {
