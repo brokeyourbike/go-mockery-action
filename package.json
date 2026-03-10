@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc && ncc build --minify",
-    "fmt": "prettier **/*.ts --write",
+    "fmt:fix": "prettier **/*.ts --write",
     "test": "jest --coverage"
   },
   "repository": {
@@ -22,9 +22,8 @@
   "license": "MPL-2.0",
   "dependencies": {
     "@actions/core": "^2.0.1",
-    "@actions/http-client": "^3.0.0",
     "@actions/io": "^2.0.0",
-    "@actions/tool-cache": "^2.0.2",
+    "@actions/tool-cache": "^3.0.0",
     "@octokit/plugin-paginate-rest": "^14.0.0",
     "lodash": "^4.17.23",
     "semver": "^7.7.3"
