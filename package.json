@@ -4,7 +4,7 @@
   "private": true,
   "main": "lib/index.js",
   "scripts": {
-    "build": "tsc && ncc build --minify",
+    "build": "tsc && ncc build",
     "fmt:fix": "prettier **/*.ts --write",
     "test": "jest --coverage"
   },
