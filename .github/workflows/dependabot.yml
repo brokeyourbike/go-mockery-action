@@ -1,0 +1,38 @@
+name: dependabot auto-build
+
+on:
+  pull_request_target:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-dist:
+    name: Rebuild dist
+    if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.head_ref }}
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Commit & push dist
+        run: |
+          if [ -n "$(git status --porcelain dist/)" ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add dist/
+            git commit -m "build: update dist"
+            git push
+          fi
